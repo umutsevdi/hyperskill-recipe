@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RecipesApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-15T21:20:48" hostname="fedora" time="12.905">
+  <properties/>
+  <testcase name="start" classname="RecipesApplicationTest" time="12.905"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
+
+2022-05-16 00:20:48.603  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 17.0.3 on fedora with PID 64408 (started by umutsevdi in /home/umutsevdi/IdeaProjects/Recipes/Recipes/task)
+2022-05-16 00:20:48.606  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+2022-05-16 00:20:49.161  INFO 64408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 00:20:49.214  INFO 64408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2022-05-16 00:20:50.011  INFO 64408 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-05-16 00:20:50.021  INFO 64408 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 00:20:50.021  INFO 64408 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-05-16 00:20:50.089  INFO 64408 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-16 00:20:50.090  INFO 64408 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1440 ms
+2022-05-16 00:20:50.339  INFO 64408 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 00:20:50.381  INFO 64408 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-05-16 00:20:50.488  INFO 64408 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-16 00:20:50.563  INFO 64408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-16 00:20:50.694  INFO 64408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-16 00:20:50.717  INFO 64408 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-16 00:20:51.286  INFO 64408 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 00:20:51.294  INFO 64408 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 00:20:51.616  WARN 64408 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 00:20:51.789  INFO 64408 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d45c4b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@a1e578f, org.springframework.security.web.header.HeaderWriterFilter@24888d8b, org.springframework.security.web.authentication.logout.LogoutFilter@77aeba9b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3c862522, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f267e1b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21f94fe3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46146832, org.springframework.security.web.session.SessionManagementFilter@4281a26f, org.springframework.security.web.access.ExceptionTranslationFilter@15a6a91f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b859355]
+2022-05-16 00:20:52.224  INFO 64408 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-05-16 00:20:52.262  INFO 64408 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-05-16 00:20:52.276  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 3.931 seconds (JVM running for 4.529)
+2022-05-16 00:20:52.520  INFO 64408 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-16 00:20:52.521  INFO 64408 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-16 00:20:52.522  INFO 64408 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-16 00:20:52.607  INFO 64408 --- [nio-8881-exec-1] r.controller.AuthenticationController    : register:AuthenticationRequest(email=LoginTest1@test.com, password=Test1111)
+2022-05-16 00:20:52.733  INFO 64408 --- [nio-8881-exec-1] r.controller.AuthenticationController    : register:complete:1
+?[1;31m
+Start test 2?[0m
+2022-05-16 00:20:52.758  INFO 64408 --- [nio-8881-exec-2] r.controller.AuthenticationController    : register:AuthenticationRequest(email=LoginTest1@test.com, password=Test1111)
+2022-05-16 00:20:52.836  WARN 64408 --- [nio-8881-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2022-05-16 00:20:52.837 ERROR 64408 --- [nio-8881-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_OB8KQYQQGMEFL0ACO34AKDTPE_INDEX_2 ON PUBLIC.USER(EMAIL) VALUES 1"; SQL statement:
+insert into user (id, date, email, password) values (null, ?, ?, ?) [23505-200]
+2022-05-16 00:20:52.841  WARN 64408 --- [nio-8881-exec-2] r.controller.AuthenticationController    : could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_OB8KQYQQGMEFL0ACO34AKDTPE_INDEX_2 ON PUBLIC.USER(EMAIL) VALUES 1"; SQL statement:
+insert into user (id, date, email, password) values (null, ?, ?, ?) [23505-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+?[1;31m
+Start test 3?[0m
+2022-05-16 00:20:52.852  INFO 64408 --- [nio-8881-exec-3] r.controller.AuthenticationController    : register:AuthenticationRequest(email=LoginTest2@test.com, password=Test2222222)
+2022-05-16 00:20:52.918  INFO 64408 --- [nio-8881-exec-3] r.controller.AuthenticationController    : register:complete:3
+?[1;31m
+Start test 4?[0m
+2022-05-16 00:20:52.927  INFO 64408 --- [nio-8881-exec-4] r.controller.AuthenticationController    : register:AuthenticationRequest(email=LoginTest3@test.com, password=Test33333333333)
+2022-05-16 00:20:52.988  INFO 64408 --- [nio-8881-exec-4] r.controller.AuthenticationController    : register:complete:4
+?[1;31m
+Start test 5?[0m
+2022-05-16 00:20:52.997  INFO 64408 --- [nio-8881-exec-5] r.controller.AuthenticationController    : register:AuthenticationRequest(email=Test3@testcom, password=Test3333)
+2022-05-16 00:20:52.998  WARN 64408 --- [nio-8881-exec-5] r.controller.AuthenticationController    : null
+?[1;31m
+Start test 6?[0m
+2022-05-16 00:20:53.005  INFO 64408 --- [nio-8881-exec-6] r.controller.AuthenticationController    : register:AuthenticationRequest(email=Test4test.com, password=Test44444444)
+2022-05-16 00:20:53.005  WARN 64408 --- [nio-8881-exec-6] r.controller.AuthenticationController    : null
+?[1;31m
+Start test 7?[0m
+2022-05-16 00:20:53.013  INFO 64408 --- [nio-8881-exec-7] r.controller.AuthenticationController    : register:AuthenticationRequest(email=Test5@test.com, password=Test555)
+2022-05-16 00:20:53.013  WARN 64408 --- [nio-8881-exec-7] r.controller.AuthenticationController    : null
+?[1;31m
+Start test 8?[0m
+2022-05-16 00:20:53.022  INFO 64408 --- [nio-8881-exec-8] r.controller.AuthenticationController    : register:AuthenticationRequest(email=Test6@test.com, password=        )
+2022-05-16 00:20:53.022  WARN 64408 --- [nio-8881-exec-8] r.controller.AuthenticationController    : null
+?[1;31m
+Start test 9?[0m
+2022-05-16 00:20:53.038  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:53.204  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:53.229  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Fresh Mint Tea /Test, description=Light, aromatic and refreshing beverage, ... /Test, category=beverage /Test, ingredients=[boiled water, honey, fresh mint leaves /Test], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again /Test], date=null, authorId=null)
+2022-05-16 00:20:53.238  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=1, name=Fresh Mint Tea /Test, description=Light, aromatic and refreshing beverage, ... /Test, category=beverage /Test, ingredients=[boiled water, honey, fresh mint leaves /Test], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again /Test], date=2022-05-16T00:20:53.232254158, authorId=3)
+?[1;31m
+Start test 10?[0m
+2022-05-16 00:20:53.261  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:53.322  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:53.325  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=null, authorId=null)
+2022-05-16 00:20:53.329  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=2, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=2022-05-16T00:20:53.328050912, authorId=3)
+?[1;31m
+Start test 11?[0m
+2022-05-16 00:20:53.337  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:53.401  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:53.406  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : getRecipe:1
+2022-05-16 00:20:53.417  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : =>found:RecipeDTO(id=1, name=Fresh Mint Tea /Test, description=Light, aromatic and refreshing beverage, ... /Test, category=beverage /Test, ingredients=[boiled water, honey, fresh mint leaves /Test], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again /Test], date=2022-05-16T00:20:53.232254, authorId=3)
+?[1;31m
+Start test 12?[0m
+2022-05-16 00:20:53.437  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:53.505  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:53.507  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : getRecipe:2
+2022-05-16 00:20:53.509  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : =>found:RecipeDTO(id=2, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=2022-05-16T00:20:53.328051, authorId=3)
+?[1;31m
+Start test 13?[0m
+2022-05-16 00:20:54.041  INFO 64408 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 00:20:54.043  INFO 64408 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-16 00:20:54.129  INFO 64408 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
+
+2022-05-16 00:20:54.255  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 17.0.3 on fedora with PID 64408 (started by umutsevdi in /home/umutsevdi/IdeaProjects/Recipes/Recipes/task)
+2022-05-16 00:20:54.256  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+2022-05-16 00:20:54.394  INFO 64408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 00:20:54.401  INFO 64408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2022-05-16 00:20:54.577  INFO 64408 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-05-16 00:20:54.578  INFO 64408 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 00:20:54.578  INFO 64408 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-05-16 00:20:54.592  INFO 64408 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-16 00:20:54.592  INFO 64408 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 333 ms
+2022-05-16 00:20:54.660  INFO 64408 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 00:20:54.663  INFO 64408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-05-16 00:20:54.670  INFO 64408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-05-16 00:20:54.670  INFO 64408 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-16 00:20:54.724  INFO 64408 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 00:20:54.724  INFO 64408 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 00:20:54.792  WARN 64408 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 00:20:54.841  INFO 64408 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@533165e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@282d1023, org.springframework.security.web.header.HeaderWriterFilter@4e6c703a, org.springframework.security.web.authentication.logout.LogoutFilter@7926d092, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58a93f51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d1b96b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@505bc480, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@324e62e2, org.springframework.security.web.session.SessionManagementFilter@58d635de, org.springframework.security.web.access.ExceptionTranslationFilter@5120886f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f915016]
+2022-05-16 00:20:54.987  INFO 64408 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-05-16 00:20:54.999  INFO 64408 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-05-16 00:20:55.004  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 0.773 seconds (JVM running for 7.257)
+?[1;31m
+Start test 14?[0m
+2022-05-16 00:20:55.014  INFO 64408 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-16 00:20:55.014  INFO 64408 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-16 00:20:55.015  INFO 64408 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-16 00:20:55.016  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.086  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.090  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : getRecipe:1
+2022-05-16 00:20:55.094  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : =>found:RecipeDTO(id=1, name=Fresh Mint Tea /Test, description=Light, aromatic and refreshing beverage, ... /Test, category=beverage /Test, ingredients=[boiled water, honey, fresh mint leaves /Test], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again /Test], date=2022-05-16T00:20:53.232254, authorId=3)
+?[1;31m
+Start test 15?[0m
+2022-05-16 00:20:55.105  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.166  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.168  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : getRecipe:2
+2022-05-16 00:20:55.170  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : =>found:RecipeDTO(id=2, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=2022-05-16T00:20:53.328051, authorId=3)
+?[1;31m
+Start test 16?[0m
+2022-05-16 00:20:55.178  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.239  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.244  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : updateRecipe:1:RecipeDTO(id=null, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=null, authorId=null)
+2022-05-16 00:20:55.263  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : updateRecipe: success =>RecipeDTO(id=1, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=2022-05-16T00:20:55.246128098, authorId=3)
+?[1;31m
+Start test 17?[0m
+2022-05-16 00:20:55.270  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.331  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.334  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : getRecipe:1
+2022-05-16 00:20:55.336  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : =>found:RecipeDTO(id=1, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=2022-05-16T00:20:55.246128, authorId=3)
+?[1;31m
+Start test 18?[0m
+2022-05-16 00:20:55.343  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.405  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.408  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : deleteRecipe:1
+2022-05-16 00:20:55.411  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : =>found+deleted
+?[1;31m
+Start test 19?[0m
+2022-05-16 00:20:55.425  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.488  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.490  INFO 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : deleteRecipe:1
+2022-05-16 00:20:55.493  INFO 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : =>not_found
+?[1;31m
+Start test 20?[0m
+2022-05-16 00:20:55.499  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.560  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.562  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : getRecipe:1
+2022-05-16 00:20:55.563  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : =>not_found
+?[1;31m
+Start test 21?[0m
+2022-05-16 00:20:55.570  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.633  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.635  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : updateRecipe:1:RecipeDTO(id=null, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=null, authorId=null)
+?[1;31m
+Start test 22?[0m
+2022-05-16 00:20:55.654  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.715  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.717  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=ice-cream, description=-, category=Dessert, ingredients=[--, ---, -], directions=[----, ---], date=null, authorId=null)
+2022-05-16 00:20:55.720  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=3, name=ice-cream, description=-, category=Dessert, ingredients=[--, ---, -], directions=[----, ---], date=2022-05-16T00:20:55.719049820, authorId=3)
+?[1;31m
+Start test 23?[0m
+2022-05-16 00:20:55.737  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.798  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.800  INFO 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=tea r 4, description=---, category=DesserT, ingredients=[-, ----, -], directions=[----, --, --], date=null, authorId=null)
+2022-05-16 00:20:55.804  INFO 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=4, name=tea r 4, description=---, category=DesserT, ingredients=[-, ----, -], directions=[----, --, --], date=2022-05-16T00:20:55.802666448, authorId=3)
+?[1;31m
+Start test 24?[0m
+2022-05-16 00:20:55.821  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.881  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.883  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=recipe ice-cream 5, description=---, category=Desser, ingredients=[-, --, -], directions=[-, --, ---], date=null, authorId=null)
+2022-05-16 00:20:55.886  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=5, name=recipe ice-cream 5, description=---, category=Desser, ingredients=[-, --, -], directions=[-, --, ---], date=2022-05-16T00:20:55.885051691, authorId=3)
+?[1;31m
+Start test 25?[0m
+2022-05-16 00:20:55.902  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:55.963  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:55.965  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=--, description=---, category=DeSSert, ingredients=[---, -, --], directions=[---, -], date=null, authorId=null)
+2022-05-16 00:20:55.968  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=6, name=--, description=---, category=DeSSert, ingredients=[---, -, --], directions=[---, -], date=2022-05-16T00:20:55.967371770, authorId=3)
+?[1;31m
+Start test 26?[0m
+2022-05-16 00:20:55.984  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.046  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.049  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=ICE-CREAM, description=----, category=desserT, ingredients=[-, -, --], directions=[---, --, --], date=null, authorId=null)
+2022-05-16 00:20:56.053  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=7, name=ICE-CREAM, description=----, category=desserT, ingredients=[-, -, --], directions=[---, --, --], date=2022-05-16T00:20:56.051959583, authorId=3)
+?[1;31m
+Start test 27?[0m
+2022-05-16 00:20:56.071  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.133  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.135  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=---, description=--, category=dessert, ingredients=[-, ----], directions=[-----, -, ---], date=null, authorId=null)
+2022-05-16 00:20:56.139  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=8, name=---, description=--, category=dessert, ingredients=[-, ----], directions=[-----, -, ---], date=2022-05-16T00:20:56.137637214, authorId=3)
+?[1;31m
+Start test 28?[0m
+2022-05-16 00:20:56.156  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.218  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.221  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=9 recipe Tea test, description=----, category=-, ingredients=[-, -, ----], directions=[-----, -, --], date=null, authorId=null)
+2022-05-16 00:20:56.224  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=9, name=9 recipe Tea test, description=----, category=-, ingredients=[-, -, ----], directions=[-----, -, --], date=2022-05-16T00:20:56.222967769, authorId=3)
+?[1;31m
+Start test 29?[0m
+2022-05-16 00:20:56.241  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.302  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.304  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=10 ice recipe test, description=--, category=-, ingredients=[----, --;, ---], directions=[--, -], date=null, authorId=null)
+2022-05-16 00:20:56.308  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=10, name=10 ice recipe test, description=--, category=-, ingredients=[----, --;, ---], directions=[--, -], date=2022-05-16T00:20:56.307227041, authorId=3)
+?[1;31m
+Start test 30?[0m
+2022-05-16 00:20:56.325  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.386  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.388  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=11 ice-creamrecipe test, description=-, category=veryDessert, ingredients=[-, --], directions=[-----, -, ---], date=null, authorId=null)
+2022-05-16 00:20:56.392  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=11, name=11 ice-creamrecipe test, description=-, category=veryDessert, ingredients=[-, --], directions=[-----, -, ---], date=2022-05-16T00:20:56.390666094, authorId=3)
+?[1;31m
+Start test 31?[0m
+2022-05-16 00:20:56.409  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.470  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.472  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=cream, description=--, category=BEVerage, ingredients=[---, -, -], directions=[-, --], date=null, authorId=null)
+2022-05-16 00:20:56.475  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=12, name=cream, description=--, category=BEVerage, ingredients=[---, -, -], directions=[-, --], date=2022-05-16T00:20:56.474018693, authorId=3)
+?[1;31m
+Start test 32?[0m
+2022-05-16 00:20:56.491  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.551  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.553  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=ice-cre, description=-, category=---Dessert, ingredients=[---, -], directions=[----, -, -], date=null, authorId=null)
+2022-05-16 00:20:56.556  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=13, name=ice-cre, description=-, category=---Dessert, ingredients=[---, -], directions=[----, -, -], date=2022-05-16T00:20:56.555053275, authorId=3)
+?[1;31m
+Start test 33?[0m
+2022-05-16 00:20:56.573  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.633  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.636  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=ice-cream, description=-, category=DESSERT, ingredients=[----, --], directions=[-, --, -], date=null, authorId=null)
+2022-05-16 00:20:56.640  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=14, name=ice-cream, description=-, category=DESSERT, ingredients=[----, --], directions=[-, --, -], date=2022-05-16T00:20:56.638733974, authorId=3)
+?[1;31m
+Start test 34?[0m
+2022-05-16 00:20:56.656  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.719  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.721  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=15 recipe test ice-CREAM, description=-, category=Dessert, ingredients=[-, ---', -----], directions=[---, -], date=null, authorId=null)
+2022-05-16 00:20:56.724  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=15, name=15 recipe test ice-CREAM, description=-, category=Dessert, ingredients=[-, ---', -----], directions=[---, -], date=2022-05-16T00:20:56.722956476, authorId=3)
+?[1;31m
+Start test 35?[0m
+2022-05-16 00:20:56.729  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.790  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.798  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : searchRecipe:{category:Optional[dessert], name:Optional.empty}
+?[1;31m
+Start test 36?[0m
+2022-05-16 00:20:56.814  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.875  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.877  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional[ice-cream]}
+?[1;31m
+Start test 37?[0m
+2022-05-16 00:20:56.892  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:56.955  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:56.957  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : searchRecipe:{category:Optional[should_return_empty_array_1], name:Optional.empty}
+?[1;31m
+Start test 38?[0m
+2022-05-16 00:20:56.964  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.026  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.028  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional[should_return_empty_array_2]}
+?[1;31m
+Start test 39?[0m
+2022-05-16 00:20:57.036  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.097  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.099  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional.empty}
+?[1;31m
+Start test 40?[0m
+2022-05-16 00:20:57.106  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.168  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.170  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional.empty}
+?[1;31m
+Start test 41?[0m
+2022-05-16 00:20:57.176  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.237  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.239  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional.empty}
+?[1;31m
+Start test 42?[0m
+2022-05-16 00:20:57.246  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.306  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.307  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional.empty}
+?[1;31m
+Start test 43?[0m
+2022-05-16 00:20:57.313  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.377  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.379  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=null, description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+2022-05-16 00:20:57.380  WARN 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 44?[0m
+2022-05-16 00:20:57.387  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.448  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.450  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=null, ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+2022-05-16 00:20:57.452  WARN 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 45?[0m
+2022-05-16 00:20:57.458  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.518  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.520  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Warming Ginger Tea, description=null, category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy], date=null, authorId=null)
+2022-05-16 00:20:57.522  WARN 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 46?[0m
+2022-05-16 00:20:57.528  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.588  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.589  INFO 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=null, directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+2022-05-16 00:20:57.591  WARN 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 47?[0m
+2022-05-16 00:20:57.597  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.684  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.686  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Warming Ginger Tea, description=Ginger tea is a warming drink for cool weather, ..., category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=null, date=null, authorId=null)
+2022-05-16 00:20:57.687  WARN 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 48?[0m
+2022-05-16 00:20:57.693  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.754  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.756  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=  , description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+2022-05-16 00:20:57.759  WARN 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 49?[0m
+2022-05-16 00:20:57.765  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.825  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.827  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=  , ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+2022-05-16 00:20:57.829  WARN 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 50?[0m
+2022-05-16 00:20:57.835  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.895  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.897  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Warming Ginger Tea, description=  , category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy], date=null, authorId=null)
+2022-05-16 00:20:57.899  WARN 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 51?[0m
+2022-05-16 00:20:57.905  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:57.966  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:57.968  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=[], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+2022-05-16 00:20:57.969  WARN 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 52?[0m
+2022-05-16 00:20:57.975  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.037  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.039  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Warming Ginger Tea, description=Ginger tea is a warming drink for cool weather, ..., category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=[], date=null, authorId=null)
+2022-05-16 00:20:58.041  WARN 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : null
+?[1;31m
+Start test 53?[0m
+2022-05-16 00:20:58.049  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.109  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.110  INFO 64408 --- [nio-8881-exec-7] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=null, description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+?[1;31m
+Start test 54?[0m
+2022-05-16 00:20:58.117  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.178  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.183  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=null, ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+?[1;31m
+Start test 55?[0m
+2022-05-16 00:20:58.190  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.252  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.254  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Warming Ginger Tea, description=null, category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy], date=null, authorId=null)
+?[1;31m
+Start test 56?[0m
+2022-05-16 00:20:58.262  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.322  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.324  INFO 64408 --- [nio-8881-exec-6] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=null, directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+?[1;31m
+Start test 57?[0m
+2022-05-16 00:20:58.333  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.394  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.395  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Warming Ginger Tea, description=Ginger tea is a warming drink for cool weather, ..., category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=null, date=null, authorId=null)
+?[1;31m
+Start test 58?[0m
+2022-05-16 00:20:58.402  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.463  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.465  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=  , description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+?[1;31m
+Start test 59?[0m
+2022-05-16 00:20:58.472  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.535  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.537  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=  , ingredients=[boiled water, honey, fresh mint leaves], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+?[1;31m
+Start test 60?[0m
+2022-05-16 00:20:58.545  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.606  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.608  INFO 64408 --- [io-8881-exec-10] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Warming Ginger Tea, description=  , category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy], date=null, authorId=null)
+?[1;31m
+Start test 61?[0m
+2022-05-16 00:20:58.615  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.676  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.678  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Fresh Mint Tea, description=Light, aromatic and refreshing beverage, ..., category=beverage, ingredients=[], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again], date=null, authorId=null)
+?[1;31m
+Start test 62?[0m
+2022-05-16 00:20:58.686  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest2@test.com, Test2222222}
+2022-05-16 00:20:58.749  INFO 64408 --- [nio-8881-exec-5] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:20:58.751  INFO 64408 --- [nio-8881-exec-5] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=Warming Ginger Tea, description=Ginger tea is a warming drink for cool weather, ..., category=beverage, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey], directions=[], date=null, authorId=null)
+?[1;31m
+Start test 63?[0m
+2022-05-16 00:20:59.273  INFO 64408 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 00:20:59.274  INFO 64408 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-05-16 00:20:59.321  INFO 64408 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
+
+2022-05-16 00:20:59.394  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 17.0.3 on fedora with PID 64408 (started by umutsevdi in /home/umutsevdi/IdeaProjects/Recipes/Recipes/task)
+2022-05-16 00:20:59.394  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+2022-05-16 00:20:59.506  INFO 64408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 00:20:59.512  INFO 64408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2022-05-16 00:20:59.641  INFO 64408 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2022-05-16 00:20:59.642  INFO 64408 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 00:20:59.642  INFO 64408 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-05-16 00:20:59.651  INFO 64408 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-16 00:20:59.651  INFO 64408 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 255 ms
+2022-05-16 00:20:59.705  INFO 64408 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 00:20:59.708  INFO 64408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-05-16 00:20:59.712  INFO 64408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-05-16 00:20:59.712  INFO 64408 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-16 00:20:59.759  INFO 64408 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 00:20:59.759  INFO 64408 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 00:20:59.825  WARN 64408 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 00:20:59.867  INFO 64408 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5629e904, org.springframework.security.web.context.SecurityContextPersistenceFilter@17d3bf09, org.springframework.security.web.header.HeaderWriterFilter@2c4142f8, org.springframework.security.web.authentication.logout.LogoutFilter@1e250539, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5860e4c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a49995f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cb95c6c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d7914a5, org.springframework.security.web.session.SessionManagementFilter@7ef8cfbb, org.springframework.security.web.access.ExceptionTranslationFilter@47db5b8f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@201f0e84]
+2022-05-16 00:21:00.008  INFO 64408 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-05-16 00:21:00.021  INFO 64408 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2022-05-16 00:21:00.026  INFO 64408 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 0.658 seconds (JVM running for 12.279)
+?[1;31m
+Start test 64?[0m
+2022-05-16 00:21:00.032  INFO 64408 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-16 00:21:00.032  INFO 64408 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-16 00:21:00.034  INFO 64408 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-16 00:21:00.035  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest1@test.com, Test1111}
+2022-05-16 00:21:00.115  INFO 64408 --- [nio-8881-exec-1] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:21:00.122  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : postRecipe:RecipeDTO(id=null, name=Fresh Mint Tea /Test, description=Light, aromatic and refreshing beverage, ... /Test, category=beverage /Test, ingredients=[boiled water, honey, fresh mint leaves /Test], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again /Test], date=null, authorId=null)
+2022-05-16 00:21:00.130  INFO 64408 --- [nio-8881-exec-1] recipes.controller.RecipeController      : postRecipe: success =>RecipeDTO(id=16, name=Fresh Mint Tea /Test, description=Light, aromatic and refreshing beverage, ... /Test, category=beverage /Test, ingredients=[boiled water, honey, fresh mint leaves /Test], directions=[Boil water, Pour boiling hot water into a mug, Add fresh mint leaves, Mix and let the mint leaves seep for 3-5 minutes, Add honey and mix again /Test], date=2022-05-16T00:21:00.124814212, authorId=1)
+?[1;31m
+Start test 65?[0m
+2022-05-16 00:21:00.138  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest1@test.com, Test1111}
+2022-05-16 00:21:00.203  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:21:00.206  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : getRecipe:2
+2022-05-16 00:21:00.209  INFO 64408 --- [nio-8881-exec-2] recipes.controller.RecipeController      : =>found:RecipeDTO(id=2, name=Warming Ginger Tea /Test, description=Ginger tea is a warming drink for cool weather, ... /Test, category=beverage /Test, ingredients=[1 inch ginger root, minced, 1/2 lemon, juiced, 1/2 teaspoon manuka honey /Test], directions=[Place all ingredients in a mug and fill with warm water (not too hot so you keep the beneficial honey compounds in tact), Steep for 5-10 minutes, Drink and enjoy /Test], date=2022-05-16T00:20:53.328051, authorId=3)
+?[1;31m
+Start test 66?[0m
+2022-05-16 00:21:00.222  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest1@test.com, Test1111}
+2022-05-16 00:21:00.294  INFO 64408 --- [nio-8881-exec-3] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:21:00.299  INFO 64408 --- [nio-8881-exec-3] recipes.controller.RecipeController      : searchRecipe:{category:Optional[dessert], name:Optional.empty}
+?[1;31m
+Start test 67?[0m
+2022-05-16 00:21:00.312  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest1@test.com, Test1111}
+2022-05-16 00:21:00.375  INFO 64408 --- [nio-8881-exec-4] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:21:00.380  INFO 64408 --- [nio-8881-exec-4] recipes.controller.RecipeController      : searchRecipe:{category:Optional.empty, name:Optional[ice-cream]}
+?[1;31m
+Start test 68?[0m
+2022-05-16 00:21:00.390  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest3@test.com, Test33333333333}
+2022-05-16 00:21:00.450  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:21:00.452  INFO 64408 --- [nio-8881-exec-8] recipes.controller.RecipeController      : deleteRecipe:2
+?[1;31m
+Start test 69?[0m
+2022-05-16 00:21:00.461  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {LoginTest3@test.com, Test33333333333}
+2022-05-16 00:21:00.527  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: confirmed
+2022-05-16 00:21:00.531  INFO 64408 --- [nio-8881-exec-9] recipes.controller.RecipeController      : updateRecipe:2:RecipeDTO(id=null, name=ice-cream, description=-, category=Dessert, ingredients=[--, ---, -], directions=[----, ---], date=null, authorId=null)
+?[1;31m
+Start test 70?[0m
+2022-05-16 00:21:00.543  INFO 64408 --- [io-8881-exec-10] r.config.RecipeAuthenticationProvider    : authentication: {abc@test.com, password99}
+?[1;31m
+Start test 71?[0m
+2022-05-16 00:21:00.677  INFO 64408 --- [nio-8881-exec-6] r.config.RecipeAuthenticationProvider    : authentication: {abc@test.com, password99}
+?[1;31m
+Start test 72?[0m
+2022-05-16 00:21:00.744  INFO 64408 --- [nio-8881-exec-7] r.config.RecipeAuthenticationProvider    : authentication: {abc@test.com, password99}
+?[1;31m
+Start test 73?[0m
+2022-05-16 00:21:00.812  INFO 64408 --- [nio-8881-exec-8] r.config.RecipeAuthenticationProvider    : authentication: {abc@test.com, password99}
+?[1;31m
+Start test 74?[0m
+2022-05-16 00:21:00.879  INFO 64408 --- [nio-8881-exec-9] r.config.RecipeAuthenticationProvider    : authentication: {abc@test.com, password99}
+?[1;31m
+Start test 75?[0m
+2022-05-16 00:21:00.944  INFO 64408 --- [nio-8881-exec-2] r.config.RecipeAuthenticationProvider    : authentication: {abc@test.com, password99}
+?[1;31m
+Start test 76?[0m
+?[1;31m
+Start test 77?[0m
+?[1;31m
+Start test 78?[0m
+?[1;31m
+Start test 79?[0m
+?[1;31m
+Start test 80?[0m
+?[1;31m
+Start test 81?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
