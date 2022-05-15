@@ -7,6 +7,8 @@
   </a>
 
 <p align="center">Recipe Project, is a graduate project for the Java Backend Developer track.
+  
+  
 <img src="https://img.icons8.com/color/30/000000/java-coffee-cup-logo--v1.png" alt="Java"><img src="https://img.icons8.com/color/30/000000/spring-logo.png" alt="Spring Framework"><img src="https://img.icons8.com/color/30/000000/postgreesql.png"/>
 </p>
 
